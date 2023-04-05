@@ -1,0 +1,26 @@
+// back to top
+
+html {
+	scroll-behavior: smooth;
+}
+
+.to-top {
+	background: rgb(191, 67, 31);
+	bottom: 2rem;
+	right: 2rem;
+	width: 3rem;
+	height: 3rem;
+	color: rgb(255, 255, 255);
+	opacity: 0;
+	transition: all 0.4s;
+
+	&:hover {
+		color: rgb(255, 255, 255);
+	}
+}
+
+.to-top.active {
+	bottom: 6rem;
+	pointer-events: auto;
+	opacity: 1;
+}

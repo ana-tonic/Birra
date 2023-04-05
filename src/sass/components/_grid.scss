@@ -1,0 +1,17 @@
+@use "../abstracts/mixins" as mixins;
+@import "../abstracts/variables";
+
+.products-grid {
+	width: 53.5%;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 5.05rem;
+}
+
+.no-elements {
+	@include mixins.text-style(1.5rem, rgb(191, 67, 31), 700, $alegreya-font);
+	display: initial;
+}
+
+.no-elements-hide {
+	display: none;
+}

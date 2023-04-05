@@ -1,0 +1,10 @@
+@use "../abstracts/mixins" as mixins;
+@import "../abstracts/variables";
+
+.btn {
+}
+
+@media only screen and (max-width: 992px) {
+	.btn {
+	}
+}

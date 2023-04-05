@@ -1,0 +1,13 @@
+@import "./variables";
+
+@mixin text-style(
+	$font-size: 1.125rem,
+	$color: rgb(191, 67, 31),
+	$font-weigtht: 500,
+	$font-family: $fira-sans-font
+) {
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $color;
+	font-weight: $font-weigtht;
+}

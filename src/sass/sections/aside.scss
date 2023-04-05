@@ -1,0 +1,135 @@
+@use "../abstracts/mixins" as mixins;
+@import "../abstracts/variables";
+
+.aside {
+	margin-top: 5rem;
+	margin-right: 2rem;
+	width: 17.5rem;
+
+	.cart {
+		background-color: rgb(227, 207, 171);
+		padding: 2rem;
+		&__title {
+			@include mixins.text-style();
+			margin-bottom: 1rem;
+		}
+
+		&__body {
+			@include mixins.text-style(0.875rem, rgb(255, 255, 255));
+		}
+	}
+
+	.filters {
+		background-color: rgb(227, 207, 171);
+		margin-top: 0.313rem;
+		padding: 2rem;
+
+		&__title {
+			@include mixins.text-style(1.8rem);
+			margin-bottom: 1rem;
+		}
+
+		&__subtitle {
+			@include mixins.text-style(1.2rem);
+			margin-bottom: 0.5rem;
+		}
+
+		button {
+			@include mixins.text-style(1rem, rgb(255, 255, 255), 700, $alegreya-font);
+			background-color: rgb(191, 67, 31);
+			border: rgb(255, 255, 255);
+			margin-top: 1rem;
+		}
+
+		#btn-filter-products {
+			margin-right: 2rem;
+		}
+
+		.radio-buttons,
+		.date-filter {
+			margin-top: 2rem;
+		}
+
+		.form-check-input:checked {
+			background-color: rgb(191, 67, 31);
+			border-color: rgb(191, 67, 31);
+		}
+
+		.form-check,
+		.slider-range,
+		.date-filter {
+			@include mixins.text-style(1rem, rgb(0, 0, 0));
+		}
+	}
+}
+
+.middle {
+	position: relative;
+	width: 100%;
+	max-width: 31.25rem;
+}
+
+.slider {
+	position: relative;
+	z-index: 1;
+	height: 0.625rem;
+	margin: 0 1rem;
+}
+.slider > .track {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 0.313rem;
+	background-color: rgb(244, 232, 206);
+}
+.slider > .range {
+	position: absolute;
+	z-index: 2;
+	left: 25%;
+	right: 25%;
+	top: 0;
+	bottom: 0;
+	background-color: rgb(191, 67, 31);
+}
+.slider > .thumb {
+	position: absolute;
+	z-index: 3;
+	width: 1.1rem;
+	height: 1.1rem;
+	background-color: rgb(191, 67, 31);
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(191, 67, 31, 0.1);
+	transition: box-shadow 0.3s ease-in-out;
+	margin-top: 0.313rem;
+}
+.slider > .thumb.left {
+	left: 25%;
+	transform: translate(-1rem, -0.625rem);
+}
+.slider > .thumb.right {
+	right: 25%;
+	transform: translate(1rem, -0.625rem);
+}
+
+input[type="range"] {
+	position: absolute;
+	pointer-events: none;
+	-webkit-appearance: none;
+	z-index: 2;
+	height: 0.625rem;
+	width: 100%;
+	opacity: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	pointer-events: all;
+	width: 30px;
+	height: 30px;
+	border-radius: 0;
+	border: 0 none;
+	background-color: red;
+	-webkit-appearance: none;
+}

@@ -1,0 +1,72 @@
+@use "../abstracts/mixins" as mixins;
+@import "../abstracts/variables";
+
+.card {
+	content: "";
+	width: 13.125rem;
+	height: 23.25rem;
+	margin-bottom: 1.75rem;
+	margin-left: 0.625rem;
+
+	background-color: rgb(227, 207, 171);
+	cursor: pointer;
+
+	transition: 0.3s;
+
+	.card-body {
+		height: 19.5rem;
+
+		.price {
+			@include mixins.text-style(1rem);
+			margin-bottom: 0.75rem;
+			padding: 0.5rem 0;
+		}
+
+		img {
+			height: 16.875rem;
+		}
+	}
+
+	.card-footer {
+		content: "";
+		@include mixins.text-style(1rem, rgb(255, 255, 255), 700, $alegreya-font);
+		height: 3.75rem;
+		background-color: rgb(213, 127, 44);
+		margin-top: 1rem;
+
+		transition: 0.3s;
+
+		&:hover {
+			background-color: rgb(191, 67, 31);
+		}
+	}
+}
+
+.card:hover {
+	background-color: rgb(244, 232, 206);
+	.overlay {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.overlay {
+	opacity: 0;
+	left: 5%;
+	right: 5%;
+	top: 5%;
+	bottom: 5%;
+	transition: 0.5s;
+
+	transform: translateY(30%);
+
+	.icon-handler {
+		color: rgb(255, 255, 255);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 576px) {
+}

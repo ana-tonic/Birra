@@ -1,0 +1,48 @@
+@use "../abstracts/mixins" as mixins;
+@import "../abstracts/variables";
+
+.modal {
+	.modal-content {
+		background-color: rgb(227, 207, 171);
+
+		.modal-header {
+		}
+
+		.modal-title {
+			@include mixins.text-style(1.5rem, rgb(191, 67, 31), 700, $alegreya-font);
+		}
+
+		.modal-tagline {
+			@include mixins.text-style(1, rgb(191, 67, 31), 400);
+			font-style: italic;
+			margin-top: 0.625rem;
+		}
+
+		.modal-body,
+		.modal-footer {
+			font-family: "Fira Sans", sans-serif;
+			font-weight: 400;
+		}
+
+		.modal-part,
+		.combine-with {
+			margin-bottom: 1rem;
+		}
+
+		.description {
+			margin-bottom: 2rem;
+		}
+
+		.food-pairing {
+			margin-top: 1rem;
+		}
+
+		span {
+			color: rgb(191, 67, 31);
+		}
+
+		.tip {
+			margin-left: 2rem;
+		}
+	}
+}

@@ -1,0 +1,82 @@
+@use "../abstracts/mixins" as mixins;
+@import "../abstracts/variables";
+
+// header section
+
+header {
+	.logo {
+		@include mixins.text-style(2.313rem, rgb(255, 255, 255));
+		margin-left: 10rem;
+		letter-spacing: -2px;
+
+		.title-wrapper {
+			margin-top: 0.5rem;
+			transform: scaleX(0.8);
+		}
+
+		span {
+			color: rgb(226, 160, 59);
+		}
+	}
+
+	.navbar-wraper {
+		background-color: rgb(191, 67, 31);
+		z-index: 3;
+		padding-left: 0px;
+	}
+
+	.navbar-collapse {
+		z-index: 3;
+	}
+
+	.navbar-nav {
+		margin-right: 9.375rem;
+
+		.nav-link {
+			@include mixins.text-style(1rem, rgb(255, 255, 255));
+			margin: 0 0.5rem;
+
+			&:hover {
+			}
+		}
+	}
+}
+
+.breadcrumb-nav {
+	margin-top: 5.375rem;
+	height: 3rem;
+	background-color: rgb(227, 207, 171);
+	padding: 0 12%;
+}
+
+.page-name {
+	@include mixins.text-style(1.5rem, rgb(213, 127, 44));
+}
+
+.breadcrumb {
+	@include mixins.text-style(1rem, rgb(0, 0, 0));
+	--bs-breadcrumb-divider: ">";
+	--bs-breadcrumb-divider-color: rgb(213, 127, 44);
+}
+
+@media only screen and (max-width: 992px) {
+	.navbar-wraper {
+		padding-right: 0;
+		padding-top: 0.5rem;
+		width: 100%;
+	}
+
+	.navbar {
+		.navbar-toggler {
+			margin-bottom: 3px;
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.navbar {
+		.navbar-toggler {
+			margin-right: 0.5rem;
+		}
+	}
+}
